@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "id": "ISBN1",
+      "name": "Alchemist",
+      "description": "",
+      "author": "Paulo Cohelo",
+      "count": 3,
+      "category": "Non-Fiction"
+    },
+    {
+      "id": "ISBN2",
+      "name": "The Kite Runner",
+      "description": "",
+      "author": "Khalid Hossieni",
+      "count": 2,
+      "category": "Fiction"
+    },
+    {
+      "id": "ISBN3",
+      "name": "Agile Web Development with Rails",
+      "description": "",
+      "author": "Sam Ruby, Dave Thomas, David Heinemeier Hansson",
+      "count": 5,
+      "category": "Web Development"
+    },
+    {
+      "id": "ISBN4",
+      "name": "Spring Web Flow 2 Web Development",
+      "description": "",
+      "author": "Sven Lüppken, Markus Stäuble",
+      "count": 4,
+      "category": "Computer Science"
+    },
+    {
+      "id": "ISBNPrisoner of Azkaban",
+      "name": "Prisoner of Azkaban",
+      "description": "HP series",
+      "author": "JK Rowling",
+      "count": "4",
+      "category": "Fiction"
+    }
+  ]
+}
