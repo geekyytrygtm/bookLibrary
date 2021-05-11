@@ -59,7 +59,6 @@ function AddBook(props) {
                 className="add"
                 disabled= {!name && !author && !count && !category} 
                 onClick = {() => props.addBook({
-                    id: "ISBN_"+name.split(" ").join("_"),
                     name,
                     description,
                     author,

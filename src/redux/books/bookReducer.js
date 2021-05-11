@@ -6,12 +6,12 @@ const initialState = {
 
 const bookReducer = (state = initialState, action) => {
     switch(action.type){
-        case "ADD_BOOK_REQUEST": return{
+        case "ADD_BOOK_REQUEST": return {
             ...state,
             loading: true
         }
 
-        case "UPDATE_BOOK_REQUEST": return{
+        case "UPDATE_BOOK_REQUEST": return {
             ...state,
             loading: true
         }

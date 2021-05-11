@@ -3,9 +3,9 @@
     {
       "id": "ISBN1",
       "name": "Alchemist",
-      "description": "",
+      "description": "test",
       "author": "Paulo Cohelo",
-      "count": 3,
+      "count": "2",
       "category": "Non-Fiction"
     },
     {
@@ -39,6 +39,22 @@
       "author": "JK Rowling",
       "count": "4",
       "category": "Fiction"
+    },
+    {
+      "id": "ISBN_test",
+      "name": "test",
+      "description": "",
+      "author": "Test1",
+      "count": "1",
+      "category": "test"
+    },
+    {
+      "id": "_3OXnle",
+      "name": "Redux",
+      "description": "",
+      "author": "Dan Ab",
+      "count": "7",
+      "category": "Software"
     }
   ]
 }

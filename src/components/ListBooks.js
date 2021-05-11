@@ -1,9 +1,10 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {connect} from "react-redux";
 import { fetchBooks } from "../redux/books/bookActions";
 import {Link} from "react-router-dom"
 
 function ListBooks({ data, fetchBooks }) {
+    const [seachText, updateSearch] = useState("");
     useEffect(() => {
         fetchBooks()
     }, [])
@@ -12,7 +13,10 @@ function ListBooks({ data, fetchBooks }) {
     </div>): data.error ? (<div className="booksList">
     <h2>{data.error}</h2></div>): (<div className="booksList">
             <h2>List of Books</h2>
-            <input type="text" placeholder="Search" className="searchBooks"/>
+            <input type="text" placeholder="Search"
+                value = {seachText}
+                onChange = {(ev) => updateSearch(ev.currentTarget.value)} 
+                className="searchBooks"/>
             {data.books.length>0 && (<table>
                 <thead>
                     <tr>
@@ -33,7 +37,7 @@ function ListBooks({ data, fetchBooks }) {
                                 <td>{book.author}</td>
                                 <td>{book.count}</td>
                                 <td>{book.category}</td>
-                                <td><Link to={"/edit/:"+book.id}>Edit</Link></td>
+                                <td><Link to={{pathname: "/edit/:"+book.id, state: book }}>Edit</Link></td>
                             </tr>)
 
                         })

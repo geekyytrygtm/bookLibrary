@@ -3,11 +3,12 @@ import { connect } from "react-redux"
 import { editBook } from "../redux/books/bookActions"
 
 function EditBook(props) {
-    const [name, setName] = useState(props.name);
-    const [description, setDescription] = useState(props.description);
-    const [author, setAuthor] = useState(props.author);
-    const [count, setCount] = useState(props.count);
-    const [category, setCategory] = useState(props.category);
+    console.log(props)
+    const [name, setName] = useState(props.location.state.name);
+    const [description, setDescription] = useState(props.location.state.description);
+    const [author, setAuthor] = useState(props.location.state.author);
+    const [count, setCount] = useState(props.location.state.count);
+    const [category, setCategory] = useState(props.location.state.category);
     return (
         <div className="editBook">
             <h2>Edit Books</h2>
@@ -59,6 +60,7 @@ function EditBook(props) {
                 className="add"
                 disabled= {!name && !author && !count && !category} 
                 onClick = {() => props.edit({
+                    id: props.match.params.id.split(":")[1],
                     name,
                     description,
                     author,
@@ -71,7 +73,7 @@ function EditBook(props) {
 }
 
 
-const mapStateToProps =  (state, ownProps) => {
+const mapStateToProps =  (state) => {
     return {
         book: state.book
     }

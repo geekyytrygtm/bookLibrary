@@ -89,8 +89,18 @@ button.edit{
   text-align: left;
 }
 
-table tr{
+table{
+  width: 100%;
+  margin-top: 3%;
+}
+
+table thead tr{
+  background: aquamarine;
+}
+
+table tr:nth-child(2n){
   border: 1px solid grey;
+  background-color: antiquewhite;
 }
 
 table td{

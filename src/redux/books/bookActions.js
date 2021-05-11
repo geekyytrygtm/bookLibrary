@@ -99,7 +99,7 @@ export const addBook = (data) => {
 export const editBook = (data) => {
     return (dispatch) => {
         dispatch(editBookRequest)
-        axios.put("http://localhost:3001/books", data)
+        axios.put(`http://localhost:3001/books/${data.id}`, data)
         .then(response => {
             dispatch(editBookSuccess(response.data))
         })
